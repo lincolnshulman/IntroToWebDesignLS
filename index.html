@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab: Build a Greeting Message App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #ffffff;
+            border: 2px solid #000000;
+            box-shadow: 4px 4px 0px #000000;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        h1 {
+            text-align: center;
+            color: #000000;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 10px;
+        }
+        p {
+            color: #000000;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        input[type="text"]::placeholder {
+            color: #666666;
+        }
+        button {
+            background-color: #000000;
+            color: #ffffff;
+            border: 2px solid #000000;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        #greetingMessage {
+            margin-top: 20px;
+            padding: 15px;
+            background: #ffffff;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            color: #000000;
+            font-size: 18px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Greeting App</h1>
+        <p>Enter your name below and click "Show Greeting" to see a personalized greeting message.</p>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="showGreeting()">Show Greeting</button>
+        <div id="greetingMessage"></div>
+    </div>
+    
+    <script>
+        function showGreeting() {
+            // Step 1: Get the name from the input field
+            let userName = document.getElementById("nameInput").value;
+
+            // Optional validation to handle empty input nicely
+            if (userName.trim() === "") {
+                userName = "Guest";
+            }
+
+            // Step 2: Create a greeting message using a variable
+            let message = "Hello, " + userName + "!";
+
+            // Step 3: Update the div element with the greeting message
+            document.getElementById("greetingMessage").innerText = message;
+        }
+    </script>
+</body>
+</html>
