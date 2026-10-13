@@ -7,53 +7,66 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #FFFFFF;
+            background-color: #ffffff;
             color: #000000;
         }
         .container {
             max-width: 600px;
             margin: 50px auto;
-            background: #FFFFFF;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            border: 2px solid #000000;
+            box-shadow: 4px 4px 0px #000000;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 4px;
         }
         h1 {
             text-align: center;
+            color: #000000;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 10px;
+        }
+        p {
             color: #000000;
         }
         input[type="text"] {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid #000000;
+            border: 2px solid #000000;
             border-radius: 4px;
             font-size: 16px;
             box-sizing: border-box;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        input[type="text"]::placeholder {
+            color: #666666;
         }
         button {
-            background-color: #FFFFFF;
-            color: white;
-            border: none;
+            background-color: #000000;
+            color: #ffffff;
+            border: 2px solid #000000;
             padding: 10px 15px;
             font-size: 16px;
             cursor: pointer;
             border-radius: 4px;
-            transition: background-color 0.3s ease;
             width: 100%;
+            font-weight: bold;
         }
         button:hover {
-            background-color: #FFFFFF;
+            background-color: #ffffff;
+            color: #000000;
         }
         #greetingMessage {
             margin-top: 20px;
             padding: 15px;
-            background: #FFFFFF;
-            border: 1px solid #FFFFFF;
+            background: #ffffff;
+            border: 2px solid #000000;
             border-radius: 4px;
             color: #000000;
             font-size: 18px;
             text-align: center;
+            font-weight: bold;
         }
     </style>
 </head>
